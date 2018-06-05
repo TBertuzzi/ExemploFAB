@@ -1,30 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ExemploFAB"
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
-             x:Class="ExemploFAB.MainPage">
-
+             xmlns:local="clr-namespace:ExemploFAB" x:Class="ExemploFAB.MainPage">
+    
     <RelativeLayout>
-
-        <ContentView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"  
-             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
-
-    	<Label Text="Botão flutuante em ação" />
-            
-        </ContentView>
-        <fab:FloatingActionButton  
-                x:Name="fabBtnFinalizar"  
+            <StackLayout
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                <Button
+                    x:Name="greenBtn"
+                    Text="Green"
+                    Clicked="Handle_Clicked" />
+                <Button
+                    x:Name="redBtn"
+                    Text="Red"
+                    Clicked="Handle_Clicked" />
+                <Button
+                    x:Name="blueBtn"
+                    Text="Blue"
+                    Clicked="Handle_Clicked" />
+                <Button
+                    x:Name="disabledBtn"
+                    Text="Disabled"
+                    Clicked="Handle_Clicked" />
+                <Button
+                    x:Name="noShadowBtn"
+                    Text="Change Shadow"
+                    Clicked="Handle_Clicked" />
+            </StackLayout>
+            <fab:FloatingActionButton
+                x:Name="fabBtn"
                 Source="plus.png"
                 Size="Normal"
-                NormalColor="Red"
-                RippleColor="White"
-                HasShadow="True"  
-                Command="{Binding FinalizarTarefaCommand}"
-                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-75}"  
-                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-75}" />
-        
-    </RelativeLayout>
-    
+                RippleColor="Gray"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-60}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-60}" />
+        </RelativeLayout>
 
 </ContentPage>

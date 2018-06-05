@@ -20,6 +20,8 @@ namespace ExemploFAB.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            FAB.Droid.FloatingActionButtonRenderer.InitControl();
             LoadApplication(new App());
         }
     }

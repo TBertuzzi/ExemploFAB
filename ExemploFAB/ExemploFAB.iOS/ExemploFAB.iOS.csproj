@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{720DA230-DEE6-4806-955A-048C83A75B9F}</ProjectGuid>
+    <ProjectGuid>{26E6D70A-CE44-4D00-825D-A2A796EDEDFA}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
@@ -147,15 +147,15 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
     <PackageReference Include="FAB.Forms">
       <Version>2.1.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\ExemploFAB\ExemploFAB.csproj">
-      <Project>{4BCF5FA2-54B5-4E56-A611-A8F70B09DDD9}</Project>
+      <Project>{4ECD3180-989B-4345-985A-140D0BFFB5CB}</Project>
       <Name>ExemploFAB</Name>
     </ProjectReference>
   </ItemGroup>

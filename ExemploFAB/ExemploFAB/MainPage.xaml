@@ -2,13 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ExemploFAB"
+             xmlns:fab="clr-namespace:FAB.Forms;assembly=FAB.Forms"
              x:Class="ExemploFAB.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <RelativeLayout>
+
+        <ContentView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"  
+             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+    	<Label Text="Botão flutuante em ação" />
+            
+        </ContentView>
+        <fab:FloatingActionButton  
+                x:Name="fabBtnFinalizar"  
+                Source="plus.png"
+                Size="Normal"
+                NormalColor="Red"
+                RippleColor="White"
+                HasShadow="True"  
+                Command="{Binding FinalizarTarefaCommand}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-75}"  
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-75}" />
+        
+    </RelativeLayout>
+    
 
 </ContentPage>
